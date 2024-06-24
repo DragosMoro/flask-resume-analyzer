@@ -12,7 +12,7 @@ from service.classifier_service.classifier_service import classify_resume
 from skill_extractor.general_params import SKILL_DB
 from skill_extractor.skill_extractor_class import SkillExtractor
 
-nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load("en_core_web_sm")
 load_dotenv()
 
 s3_client = boto3.client(

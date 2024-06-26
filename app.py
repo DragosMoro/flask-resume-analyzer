@@ -24,7 +24,7 @@ s3_client = boto3.client(
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
+    CORS(app, resources={r"/*": {"origins": "https://traba-go.vercel.app"}})
 
     skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher)
 

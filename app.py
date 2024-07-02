@@ -12,8 +12,7 @@ from service.classifier_service.classifier_service import classify_resume
 from skill_extractor.general_params import SKILL_DB
 from skill_extractor.skill_extractor_class import SkillExtractor
 
-exclude = [ "parser","textcat","tagger","tokenizer"]
-nlp = spacy.load("en_core_web_md", exclude=exclude)
+nlp = spacy.load("en_core_web_lg")
 load_dotenv()
 
 s3_client = boto3.client(
